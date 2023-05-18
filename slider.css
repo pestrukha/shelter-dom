@@ -1,0 +1,195 @@
+.slider {
+  position: relative;
+  width: 80%;
+  max-height: 600px;
+  max-width: calc(var(--max-width) - 80px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 0 0 125px;
+  
+}
+
+.slider__wrapper {
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
+
+  margin: 5%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.card__container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+  height: 80%;
+  width: 100%;
+
+  margin: 0%;
+  padding: 0%;
+
+  list-style-type: none;
+
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.container__no-transition {
+    transition: none;
+}
+
+.card__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+
+  height: 100%;
+  width: 100%;
+  min-width: 819px;
+
+  margin: 0%;
+  padding: 0%;
+}
+
+.card {
+  width: 27%;
+
+  margin: 0% 3%;
+}
+
+.animate__left {
+  transform: translateX(-200%);
+}
+
+.animate__right {
+  transform: translateX(0%);
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+
+  height: 400px;
+
+  margin: 0%;
+  padding: 0%;
+
+  color: var(--color-text);
+  background-color: var(--background-card);
+  border-radius: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: var(--background-card-hover);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.card__item {
+  height: 80%;
+  width: max-content;
+
+  margin: 0% 5%;
+}
+
+.item__image {
+  height: 70%;
+  width: 100%;
+
+  padding: 0%;
+}
+
+.item__header {
+  height: 30%;
+  width: 100%;
+
+  margin-top: 10%;
+  padding: 0%;
+
+  text-align: center;
+}
+
+.card__button {
+  height: 10%;
+  width: 100%;
+  max-width: 120px;
+
+  padding: 0%;
+  background: var(--background-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background: var(--background-hover);
+}
+
+
+
+/* ОБРЕЗАЕТ ОТСЮДА */
+
+
+:root {
+  --color-text: #000000;
+  --background-page: #F6F6F6;
+
+  --background-card: #FAFAFA;
+  --background-card-hover: #FFFFFF;
+
+  --border-color: #F1CDB3;
+  --background-hover: #F1CDB3;
+  --color-disabled: #CDCDCD;
+
+  --max-width: 1280px;
+}
+
+body {
+
+  max-width: var(--max-width);
+
+  background: var(--background-page);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.round__button {
+  width: 40px;
+  height: 40px;
+
+  padding: 0%;
+
+  background: var(--background-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+}
+
+.round__button:not(.not-clickable):not(:disabled):hover {
+  cursor: pointer;
+  background: var(--background-hover);
+}
+
+.round__button:disabled {
+  cursor: default;
+
+  color: var(--color-disabled);
+  border-color: var(--color-dark-s);
+
+  background: var(--background-card);
+}

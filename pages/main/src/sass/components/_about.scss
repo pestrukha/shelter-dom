@@ -1,0 +1,21 @@
+.about__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    @include media-mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+.about__image {
+    margin: 0 125px 0 125px;
+}
+
+.about__content {
+    margin: 0 0 0 50px;
+}
+
+.about__text {
+    font-size: 1.4rem;
+}
